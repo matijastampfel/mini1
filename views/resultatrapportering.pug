@@ -1,0 +1,21 @@
+include head
+body
+    block pagecontent
+        h1 Kyrkoval 2017
+        form#form(action="") 
+            select#selectLokal
+                option(selected disabled)= valjlokal
+                option(value="vasakyrkan")= vasa
+                option(value="masthuggskyrkan")= masthug
+                option(value="gårdstenskyrkan")= gardsten
+                option(value="kortedalakyrka")= kortedala
+            select#selectParti
+                option(selected disabled) Välj parti
+                option(value="Socialdemokraterna: ") Socialdemokraterna
+                option(value="Centerpartiet: ") Centerpartiet
+                option(value="Liberalerna: ") Liberalerna 
+                option(value="Miljöpartiet: ") Miljöpartiet de gröna
+                option(value="Vänsterpartiet: ") Vänsterpartiet
+                //- just takes positive and whole number 
+            input#inputNumber(type= "number" min="1" pattern="\d+$")
+            button Send
